@@ -1,0 +1,21 @@
+clients:
+  wechat39:
+    version_range: ">=3.9,<4.0"
+    process_names:
+      - WeChat.exe
+    window:
+      class_names:
+        - WeChatMainWndForPC
+    selectors: selectors.wechat39.yaml
+
+  wechat4:
+    version_range: ">=4.0,<5.0"
+    process_names:
+      - Weixin.exe
+    window:
+      class_names:
+        - Qt51514QWindowIcon
+      titles:
+        - 微信
+        - Weixin
+    selectors: selectors.wechat4.yaml

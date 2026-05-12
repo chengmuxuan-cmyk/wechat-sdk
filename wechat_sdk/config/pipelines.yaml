@@ -1,0 +1,11 @@
+pipelines:
+  chat_with:
+    - ensure_chat
+
+  send_text:
+    - ensure_chat
+    - send_text
+
+  send_file:
+    - ensure_chat
+    - send_file

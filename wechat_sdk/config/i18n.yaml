@@ -1,0 +1,21 @@
+texts:
+  file_transfer:
+    cn: 文件传输助手
+    cn_t: 文件傳輸助手
+    en: File Transfer
+  search:
+    cn: 搜索
+    cn_t: 搜尋
+    en: Search
+  chats:
+    cn: 聊天
+    cn_t: 聊天
+    en: Chats
+  contacts:
+    cn: 通讯录
+    cn_t: 通訊錄
+    en: Contacts
+  messages:
+    cn: 消息
+    cn_t: 訊息
+    en: ""

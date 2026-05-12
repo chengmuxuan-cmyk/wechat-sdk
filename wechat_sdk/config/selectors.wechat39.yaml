@@ -1,0 +1,33 @@
+selectors:
+  chat.search:
+    path:
+      - control_type: EditControl
+        name:
+          cn: 搜索
+          cn_t: 搜尋
+          en: Search
+  chat.input:
+    path:
+      - control_type: EditControl
+        search_depth: 10
+  chat.message_list:
+    path:
+      - control_type: ListControl
+        name:
+          cn: 消息
+          cn_t: 訊息
+          en: ""
+  nav.chats:
+    path:
+      - control_type: ButtonControl
+        name:
+          cn: 聊天
+          cn_t: 聊天
+          en: Chats
+  nav.contacts:
+    path:
+      - control_type: ButtonControl
+        name:
+          cn: 通讯录
+          cn_t: 通訊錄
+          en: Contacts

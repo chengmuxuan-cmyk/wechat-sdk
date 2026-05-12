@@ -1,0 +1,29 @@
+[project]
+name = "wechat-sdk"
+version = "0.1.0"
+description = "Engineering SDK for Windows WeChat automation"
+authors = [
+    {name = "Cluic", email = "tikic@qq.com"}
+]
+readme = "README.md"
+requires-python = ">=3.9,<3.15"
+dependencies = [
+    "tenacity",
+    "pywin32",
+    "pyperclip",
+    "pillow",
+    "psutil",
+    "colorama",
+    "comtypes",
+    "pyyaml",
+]
+
+[tool.setuptools.packages.find]
+include = ["wechat_sdk*"]
+
+[tool.setuptools.package-data]
+wechat_sdk = ["config/*.yaml"]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"

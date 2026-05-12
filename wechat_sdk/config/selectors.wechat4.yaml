@@ -1,0 +1,99 @@
+selectors:
+  window.main:
+    class_names:
+      - Qt51514QWindowIcon
+    titles:
+      - 微信
+      - Weixin
+  chat.search_hotkey:
+    keys: "{Ctrl}f"
+  chat.submit_hotkey:
+    keys: "{Enter}"
+  nav.chats:
+    path:
+      - control_type: ButtonControl
+        class_name: mmui::XTabBarItem
+        name: 微信
+  nav.contacts:
+    path:
+      - control_type: ButtonControl
+        class_name: mmui::XTabBarItem
+        name: 通讯录
+  chat.search:
+    path:
+      - control_type: EditControl
+        class_name: mmui::XValidatorTextEdit
+        name: 搜索
+  chat.current:
+    path:
+      - control_type: TextControl
+        automation_id: content_view.top_content_view.title_h_view.left_v_view.left_content_v_view.left_ui_.big_title_line_h_view.current_chat_name_label
+  chat.session_list:
+    path:
+      - control_type: ListControl
+        class_name: mmui::XTableView
+        automation_id: session_list
+  chat.session_item:
+    path:
+      - control_type: ListItemControl
+        class_name: mmui::ChatSessionCell
+  chat.message_list:
+    path:
+      - control_type: ListControl
+        class_name: mmui::RecyclerListView
+        automation_id: chat_message_list
+  chat.input:
+    path:
+      - control_type: EditControl
+        class_name: mmui::ChatInputField
+        automation_id: chat_input_field
+  message.send_button:
+    path:
+      - control_type: ButtonControl
+        class_name: mmui::XOutlineButton
+        name: 发送
+  message.file_button:
+    path:
+      - control_type: ButtonControl
+        class_name: mmui::XButton
+        name: 发送文件
+  contact.search:
+    path:
+      - control_type: EditControl
+        class_name: mmui::XValidatorTextEdit
+        name: 搜索
+  contact.list:
+    path:
+      - control_type: ListControl
+        class_name: mmui::StickyHeaderRecyclerListView
+        automation_id: primary_table_.contact_list
+  contact.item:
+    path:
+      - control_type: ListItemControl
+        class_name: mmui::ContactsCellItemView
+  contact.profile:
+    path:
+      - control_type: GroupControl
+        automation_id: profile_view
+  contact.profile_name:
+    path:
+      - control_type: TextControl
+        automation_id: right_v_view.nickname_button_view.display_name_text
+  contact.new_friend_entry:
+    path:
+      - control_type: ListItemControl
+        class_name: mmui::ContactsCellGroupView
+        name: 新的朋友
+  contact.new_friend_item:
+    path:
+      - control_type: ListItemControl
+        class_name: mmui::XTableCell
+  group.member_list:
+    path:
+      - control_type: ListControl
+        class_name: QFReuseGridWidget
+        automation_id: chat_member_list
+  group.member_item:
+    path:
+      - control_type: ListItemControl
+        class_name: mmui::ChatMemberCell

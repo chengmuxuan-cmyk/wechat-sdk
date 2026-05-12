@@ -1,0 +1,167 @@
+capabilities:
+  client.detect:
+    default_mode: background
+    supported: {wechat39: stable, wechat4: stable}
+  client.info:
+    default_mode: background
+    supported: {wechat39: stable, wechat4: stable}
+  client.diagnose:
+    default_mode: background
+    supported: {wechat39: stable, wechat4: stable}
+  client.is_online:
+    default_mode: background
+    supported: {wechat39: partial, wechat4: unsupported}
+  client.get_my_info:
+    default_mode: auto
+    supported: {wechat39: partial, wechat4: unsupported}
+  client.get_clients:
+    default_mode: background
+    supported: {wechat39: partial, wechat4: partial}
+  client.get_login_windows:
+    default_mode: background
+    supported: {wechat39: partial, wechat4: unsupported}
+  client.login:
+    default_mode: foreground
+    supported: {wechat39: partial, wechat4: unsupported}
+  client.get_login_qrcode:
+    default_mode: foreground
+    supported: {wechat39: partial, wechat4: unsupported}
+
+  chat.current:
+    default_mode: background
+    supported: {wechat39: stable, wechat4: stable}
+  chat.switch_to_chat_tab:
+    default_mode: auto
+    supported: {wechat39: stable, wechat4: partial}
+  chat.switch_to_contact_tab:
+    default_mode: auto
+    supported: {wechat39: stable, wechat4: partial}
+  chat.get_sessions:
+    default_mode: background
+    supported: {wechat39: stable, wechat4: partial}
+  chat.get_session_list:
+    default_mode: background
+    supported: {wechat39: stable, wechat4: stable}
+  chat.get_unread_sessions:
+    default_mode: auto
+    supported: {wechat39: unsupported, wechat4: partial}
+  chat.chat_with:
+    default_mode: auto
+    pipeline: chat_with
+    supported: {wechat39: stable, wechat4: partial}
+    required_selectors: [chat.search]
+  chat.get_recent_groups:
+    default_mode: background
+    supported: {wechat39: partial, wechat4: unsupported}
+  chat.get_sub_window:
+    default_mode: background
+    supported: {wechat39: partial, wechat4: unsupported}
+  chat.close:
+    default_mode: auto
+    supported: {wechat39: partial, wechat4: unsupported}
+
+  message.send_text:
+    default_mode: auto
+    pipeline: send_text
+    supported: {wechat39: stable, wechat4: partial}
+    required_selectors: [chat.input]
+  message.send_typing_text:
+    default_mode: foreground
+    supported: {wechat39: partial, wechat4: unsupported}
+  message.send_file:
+    default_mode: auto
+    pipeline: send_file
+    supported: {wechat39: stable, wechat4: partial}
+  message.send_url_card:
+    default_mode: auto
+    supported: {wechat39: partial, wechat4: unsupported}
+  message.send_emotion:
+    default_mode: foreground
+    supported: {wechat39: partial, wechat4: unsupported}
+  message.send_audio:
+    default_mode: foreground
+    supported: {wechat39: unsupported, wechat4: unsupported}
+  message.at_all:
+    default_mode: auto
+    supported: {wechat39: partial, wechat4: unsupported}
+  message.at_members:
+    default_mode: auto
+    supported: {wechat39: partial, wechat4: unsupported}
+  message.get_all:
+    default_mode: background
+    supported: {wechat39: unsupported, wechat4: stable}
+  message.get_new:
+    default_mode: background
+    supported: {wechat39: partial, wechat4: partial}
+  message.get_next_new:
+    default_mode: auto
+    supported: {wechat39: unsupported, wechat4: stable}
+  message.get_all_new:
+    default_mode: auto
+    supported: {wechat39: partial, wechat4: partial}
+  message.get_unread:
+    default_mode: auto
+    supported: {wechat39: unsupported, wechat4: partial}
+  message.get_history:
+    default_mode: auto
+    supported: {wechat39: partial, wechat4: partial}
+  message.load_more:
+    default_mode: auto
+    supported: {wechat39: stable, wechat4: partial}
+
+  listener.add_chat:
+    default_mode: auto
+    supported: {wechat39: unsupported, wechat4: unsupported}
+  listener.remove_chat:
+    default_mode: background
+    supported: {wechat39: unsupported, wechat4: unsupported}
+  listener.start:
+    default_mode: background
+    supported: {wechat39: unsupported, wechat4: partial}
+  listener.stop:
+    default_mode: background
+    supported: {wechat39: unsupported, wechat4: partial}
+  listener.poll_once:
+    default_mode: auto
+    supported: {wechat39: unsupported, wechat4: partial}
+
+  msg.quote: {default_mode: auto, supported: {wechat39: partial, wechat4: unsupported}}
+  msg.forward: {default_mode: auto, supported: {wechat39: partial, wechat4: unsupported}}
+  msg.merge_forward: {default_mode: foreground, supported: {wechat39: partial, wechat4: unsupported}}
+  msg.delete: {default_mode: foreground, supported: {wechat39: unsupported, wechat4: unsupported}}
+  msg.multi_select: {default_mode: foreground, supported: {wechat39: partial, wechat4: unsupported}}
+  msg.sender_info: {default_mode: foreground, supported: {wechat39: partial, wechat4: unsupported}}
+  msg.add_friend: {default_mode: foreground, supported: {wechat39: partial, wechat4: unsupported}}
+
+  contact.get_friend_details: {default_mode: foreground, supported: {wechat39: stable, wechat4: partial}}
+  contact.get_all_friends: {default_mode: foreground, supported: {wechat39: stable, wechat4: partial}}
+  contact.search: {default_mode: auto, supported: {wechat39: partial, wechat4: partial}}
+  contact.get_new_friends: {default_mode: foreground, supported: {wechat39: stable, wechat4: partial}}
+  contact.add_new_friend: {default_mode: foreground, supported: {wechat39: stable, wechat4: unsupported}}
+  contact.edit_friend_info: {default_mode: foreground, supported: {wechat39: unsupported, wechat4: unsupported}}
+
+  group.create: {default_mode: foreground, supported: {wechat39: unsupported, wechat4: unsupported}}
+  group.add_members: {default_mode: foreground, supported: {wechat39: partial, wechat4: unsupported}}
+  group.remove_members: {default_mode: foreground, supported: {wechat39: unsupported, wechat4: unsupported}}
+  group.get_members: {default_mode: auto, supported: {wechat39: stable, wechat4: partial}}
+  group.manage: {default_mode: foreground, supported: {wechat39: unsupported, wechat4: unsupported}}
+
+  file.send: {default_mode: auto, supported: {wechat39: stable, wechat4: partial}}
+  file.download_message_file: {default_mode: auto, supported: {wechat39: partial, wechat4: unsupported}}
+  file.open_file_manager: {default_mode: foreground, supported: {wechat39: partial, wechat4: unsupported}}
+  file.download_files: {default_mode: foreground, supported: {wechat39: partial, wechat4: unsupported}}
+
+  image.preview: {default_mode: foreground, supported: {wechat39: partial, wechat4: unsupported}}
+  image.ocr: {default_mode: foreground, supported: {wechat39: partial, wechat4: unsupported}}
+  image.save: {default_mode: foreground, supported: {wechat39: partial, wechat4: unsupported}}
+
+  dialog.get: {default_mode: foreground, supported: {wechat39: partial, wechat4: unsupported}}
+  dialog.select_option: {default_mode: foreground, supported: {wechat39: partial, wechat4: unsupported}}
+  dialog.confirm: {default_mode: foreground, supported: {wechat39: partial, wechat4: unsupported}}
+  dialog.cancel: {default_mode: foreground, supported: {wechat39: partial, wechat4: unsupported}}
+
+  moment.open: {default_mode: foreground, supported: {wechat39: unsupported, wechat4: unsupported}}
+  moment.get_moments: {default_mode: foreground, supported: {wechat39: unsupported, wechat4: unsupported}}
+  moment.like: {default_mode: foreground, supported: {wechat39: unsupported, wechat4: unsupported}}
+  moment.comment: {default_mode: foreground, supported: {wechat39: unsupported, wechat4: unsupported}}
+  moment.publish: {default_mode: foreground, supported: {wechat39: unsupported, wechat4: unsupported}}
